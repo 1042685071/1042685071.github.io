@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RigidCore SPC Flooring | Waterproof Eco Flooring</title>
+  <meta name="description" content="Waterproof, low-VOC SPC flooring with rigid core strength, click-lock installation, and wood or stone finishes for residential and commercial projects.">
+  <style>
+    :root {
+      --ink: #1c2621;
+      --muted: #637069;
+      --line: #dce4df;
+      --paper: #fbfaf6;
+      --white: #ffffff;
+      --forest: #244d38;
+      --moss: #6f8c55;
+      --clay: #b8794c;
+      --sage: #eef3ed;
+      --stone: #e8e5dc;
+      --charcoal: #17201c;
+      --shadow: 0 18px 50px rgba(28, 38, 33, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(251, 250, 246, 0.9);
+      border-bottom: 1px solid rgba(220, 228, 223, 0.85);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: var(--forest);
+      border-radius: 8px;
+      box-shadow: inset 0 -8px 18px rgba(255, 255, 255, 0.12);
+    }
+
+    .brand-text {
+      display: grid;
+      line-height: 1.05;
+    }
+
+    .brand-text span:last-child {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 680;
+    }
+
+    .nav-links a:hover {
+      color: var(--forest);
+    }
+
+    .nav-cta,
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 18px;
+      color: var(--white);
+      background: var(--forest);
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-weight: 720;
+      box-shadow: 0 12px 28px rgba(36, 77, 56, 0.22);
+      transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+
+    .nav-cta:hover,
+    .button:hover {
+      background: #183a2a;
+      transform: translateY(-1px);
+      box-shadow: 0 16px 34px rgba(36, 77, 56, 0.28);
+    }
+
+    .button.secondary {
+      color: var(--forest);
+      background: rgba(255, 255, 255, 0.82);
+      border-color: rgba(36, 77, 56, 0.2);
+      box-shadow: none;
+    }
+
+    .button.secondary:hover {
+      background: var(--white);
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .hero {
+      min-height: calc(100vh - 74px);
+      display: grid;
+      align-items: end;
+      position: relative;
+      isolation: isolate;
+      color: var(--white);
+      background: #1f2b25;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(18, 29, 24, 0.86) 0%, rgba(18, 29, 24, 0.58) 43%, rgba(18, 29, 24, 0.18) 100%),
+        url("assets/enhanced/hero-floor-clean.jpg") center / cover no-repeat;
+      transform: scale(1.02);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 180px;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(18, 29, 24, 0.72), rgba(18, 29, 24, 0));
+    }
+
+    .hero-inner {
+      padding: 92px 0 40px;
+    }
+
+    .hero-copy {
+      width: min(690px, 100%);
+      padding-bottom: 8vh;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #dce9d9;
+      font-size: 13px;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 2px;
+      background: var(--moss);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero-lede {
+      max-width: 610px;
+      margin-top: 22px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: clamp(18px, 2.1vw, 22px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      background: rgba(251, 250, 246, 0.94);
+      color: var(--ink);
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      box-shadow: var(--shadow);
+    }
+
+    .trust-item {
+      min-height: 112px;
+      padding: 24px;
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--forest);
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .trust-item span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 620;
+    }
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.55fr);
+      align-items: end;
+      gap: 44px;
+      margin-bottom: 44px;
+    }
+
+    .kicker {
+      color: var(--moss);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .benefit {
+      min-height: 260px;
+      padding: 30px;
+      background: var(--white);
+    }
+
+    .benefit svg {
+      color: var(--forest);
+      margin-bottom: 28px;
+    }
+
+    .benefit h3 {
+      font-size: 21px;
+      line-height: 1.15;
+    }
+
+    .benefit p {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .eco-band {
+      background: var(--sage);
+      border-block: 1px solid var(--line);
+    }
+
+    .eco-layout {
+      display: grid;
+      grid-template-columns: 0.92fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eco-media {
+      position: relative;
+      min-height: 520px;
+    }
+
+    .eco-media img {
+      width: 82%;
+      height: 430px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .eco-media img:last-child {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 56%;
+      height: 260px;
+      border: 10px solid var(--sage);
+    }
+
+    .check-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 30px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 14px;
+      color: var(--muted);
+    }
+
+    .check-list strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .check-dot {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: var(--moss);
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .products {
+      background: var(--paper);
+    }
+
+    .products .section-head {
+      display: block;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .products .section-head h2 {
+      font-size: clamp(34px, 4vw, 48px);
+      max-width: 980px;
+    }
+
+    .products .section-head p {
+      max-width: 780px;
+      margin-top: 18px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product-card {
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 10px 28px rgba(28, 38, 33, 0.06);
+    }
+
+    .product-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: var(--stone);
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .product-info p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .spec-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .spec-row span {
+      padding: 7px 10px;
+      color: var(--forest);
+      background: var(--sage);
+      border: 1px solid rgba(36, 77, 56, 0.12);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .catalog-layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .catalog-current {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 16px;
+      padding: 18px 20px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .catalog-current h3 {
+      margin: 0;
+      font-size: clamp(28px, 3vw, 40px);
+      line-height: 1.08;
+    }
+
+    .catalog-current p {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .category-nav {
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .category-button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      min-height: 48px;
+      padding: 10px 12px;
+      color: var(--muted);
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left;
+      font-weight: 760;
+    }
+
+    .category-button:hover,
+    .category-button.is-active {
+      color: var(--forest);
+      background: var(--sage);
+      border-color: rgba(36, 77, 56, 0.12);
+    }
+
+    .category-button span:last-child {
+      flex: 0 0 auto;
+      min-width: 28px;
+      padding: 4px 8px;
+      color: var(--forest);
+      background: rgba(36, 77, 56, 0.08);
+      border-radius: 999px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .catalog-panel {
+      min-width: 0;
+      padding-top: 0;
+    }
+
+    .catalog-status {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .product-media {
+      position: relative;
+      background: var(--stone);
+    }
+
+    .product-code {
+      display: block;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .page-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .page-button {
+      min-height: 40px;
+      padding: 0 14px;
+      color: var(--forest);
+      background: var(--white);
+      border: 1px solid rgba(36, 77, 56, 0.22);
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 760;
+    }
+
+    .page-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.45;
+    }
+
+    .collection-note {
+      margin-top: 26px;
+      padding: 20px 24px;
+      color: var(--muted);
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .structure {
+      color: var(--white);
+      background: var(--charcoal);
+    }
+
+    .structure .kicker,
+    .structure h2 {
+      color: var(--white);
+    }
+
+    .structure .section-head p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .structure-layout {
+      display: grid;
+      grid-template-columns: 1fr 0.92fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .layer-stack {
+      display: grid;
+      gap: 10px;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+    }
+
+    .layer {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 20px;
+      align-items: center;
+      padding: 18px 20px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--ink);
+      border-left: 6px solid var(--moss);
+      border-radius: 6px;
+    }
+
+    .layer:nth-child(2) {
+      border-left-color: var(--clay);
+    }
+
+    .layer:nth-child(3) {
+      border-left-color: #9b8d75;
+    }
+
+    .layer:nth-child(4) {
+      border-left-color: #576b5f;
+    }
+
+    .layer:nth-child(5) {
+      border-left-color: #7a938b;
+    }
+
+    .layer strong {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .layer span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .structure-photo {
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .structure-photo img {
+      width: 100%;
+      height: 520px;
+      object-fit: contain;
+      padding: 28px;
+      background: #0d1411;
+    }
+
+    .quality {
+      background: var(--white);
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1fr;
+      gap: 42px;
+      align-items: stretch;
+    }
+
+    .factory-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 12px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .factory-shot {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      min-height: 150px;
+      background: var(--stone);
+      border-radius: 6px;
+    }
+
+    .factory-shot img {
+      width: 100%;
+      height: 100%;
+      min-height: 150px;
+      object-fit: cover;
+    }
+
+    .factory-shot span {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      padding: 5px 8px;
+      color: var(--white);
+      background: rgba(23, 32, 28, 0.7);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 760;
+    }
+
+    .quality-panel {
+      display: grid;
+      align-content: center;
+      gap: 22px;
+      padding: 42px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .quality-panel p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .metric {
+      padding: 18px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--forest);
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .quote {
+      padding: 72px 0;
+      color: var(--white);
+      background: linear-gradient(120deg, var(--forest), #1b3327);
+    }
+
+    .quote-box {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.62fr);
+      gap: 44px;
+      align-items: start;
+    }
+
+    .quote h2 {
+      margin-top: 0;
+      color: var(--white);
+    }
+
+    .quote p {
+      margin-top: 18px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 17px;
+      max-width: 620px;
+    }
+
+    .contact-card {
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-lines {
+      display: grid;
+      gap: 14px;
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-lines li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      align-items: start;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .contact-lines svg {
+      margin-top: 2px;
+      color: #d6e6cf;
+    }
+
+    .contact-lines strong {
+      display: block;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .quote .button.secondary {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .quote .button.secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .site-footer {
+      padding: 28px 0;
+      color: #d1d9d4;
+      background: #101713;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .trust-strip,
+      .benefit-grid,
+      .product-grid,
+      .metric-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .catalog-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .catalog-current {
+        display: grid;
+      }
+
+      .category-nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-head,
+      .eco-layout,
+      .structure-layout,
+      .quality-grid,
+      .quote-box {
+        grid-template-columns: 1fr;
+      }
+
+      .eco-media {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .shell {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .nav {
+        min-height: 66px;
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        min-height: 760px;
+      }
+
+      .hero-inner {
+        padding-top: 70px;
+      }
+
+      .hero-copy {
+        padding-bottom: 42px;
+      }
+
+      .hero-actions,
+      .contact-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .trust-strip,
+      .benefit-grid,
+      .product-grid,
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .pagination {
+        display: grid;
+      }
+
+      .trust-item {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+
+      section {
+        padding: 68px 0;
+      }
+
+      .eco-media {
+        min-height: 360px;
+      }
+
+      .eco-media img {
+        width: 88%;
+        height: 300px;
+      }
+
+      .eco-media img:last-child {
+        width: 62%;
+        height: 190px;
+        border-width: 7px;
+      }
+
+      .layer {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .structure-photo img {
+        height: 360px;
+        min-height: 360px;
+      }
+
+      .factory-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .quality-panel,
+      .contact-card {
+        padding: 24px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="RigidCore SPC Flooring home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 15c4-7 10-10 16-9-2 7-7 12-16 13 0-1.4 0-2.7 0-4Z"></path><path d="M5 17c4-2 8-4 12-8"></path></svg>
+        </span>
+        <span class="brand-text">
+          <span>RigidCore SPC</span>
+          <span>Waterproof flooring</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#benefits">Why SPC</a>
+        <a href="#products">Products</a>
+        <a href="#structure">Construction</a>
+        <a href="#quality">Manufacturing</a>
+        <a href="#quote">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#quote">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path></svg>
+        Get Quote
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="SPC flooring introduction">
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Rigid core SPC vinyl flooring</span>
+          <h1>Waterproof SPC flooring made for real life.</h1>
+          <p class="hero-lede">Durable rigid-core SPC planks with low-VOC materials, realistic wood and stone visuals, and easy click-lock installation.</p>
+          <div class="hero-actions">
+            <a class="button" href="#products">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+              View Products
+            </a>
+            <a class="button secondary" href="#quote">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+              Request a Quote
+            </a>
+          </div>
+        </div>
+        <div class="trust-strip" aria-label="Product highlights">
+          <div class="trust-item">
+            <strong>Waterproof</strong>
+            <span>Rigid core construction</span>
+          </div>
+          <div class="trust-item">
+            <strong>Low-VOC</strong>
+            <span>No added formaldehyde</span>
+          </div>
+          <div class="trust-item">
+            <strong>REACH-Aware</strong>
+            <span>Material-conscious formulation</span>
+          </div>
+          <div class="trust-item">
+            <strong>Click-Lock</strong>
+            <span>Glue-free installation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Why choose SPC flooring</span>
+            <h2>Comfort, resilience, and everyday performance underfoot.</h2>
+          </div>
+          <p>SPC flooring is designed for busy homes, apartments, hospitality spaces, and light commercial interiors where water resistance, dimensional stability, and easy maintenance matter.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s7 7.1 7 12a7 7 0 0 1-14 0c0-4.9 7-12 7-12Z"></path></svg>
+            <h3>Waterproof by Design</h3>
+            <p>The rigid SPC core helps resist swelling, making it a practical choice for kitchens, bathrooms, laundry rooms, and basements.</p>
+          </article>
+          <article class="benefit">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 14.5A5 5 0 0 0 12 22a5 5 0 0 0 5-5c0-1.6-.6-2.9-1.5-4 .1 1.2-.7 2.3-1.9 2.6.6-2.4-.8-5-3.6-7.6.5 3.2-1.5 4.8-1.5 6.5Z"></path><path d="M13 4c1.6 1.4 2.5 3.1 2.5 5"></path></svg>
+            <h3>Enhanced Fire Resistance</h3>
+            <p>A mineral-based rigid core offers improved heat resistance compared with many wood-based flooring products.</p>
+          </article>
+          <article class="benefit">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13c4-8 10-10 17-8-1 8-7 13-17 14 0-2 0-4 0-6Z"></path><path d="M5 17c4-3 8-6 13-9"></path></svg>
+            <h3>Low-VOC Material Profile</h3>
+            <p>Made with low-VOC materials, no added formaldehyde, and a solvent-free coating to support healthier indoor spaces.</p>
+          </article>
+          <article class="benefit">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v16H8Z"></path><path d="M16 8h4v8h-4"></path><path d="M4 8h4v8H4"></path></svg>
+            <h3>Fast Click-Lock Installation</h3>
+            <p>A glue-free locking system keeps planks tight and even, helping reduce installation time and improve edge stability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="eco-band">
+      <div class="shell eco-layout">
+        <div class="eco-media" aria-label="Eco-friendly SPC flooring visuals">
+          <img src="assets/pdf-images/page-05-img-07.jpg" alt="Light SPC flooring installed in a living room">
+          <img src="assets/pdf-images/page-05-img-02.jpg" alt="Water-resistant wood look SPC flooring surface">
+        </div>
+        <div>
+          <span class="kicker">Eco-conscious SPC flooring</span>
+          <h2>A cleaner flooring choice for modern interiors.</h2>
+          <ul class="check-list">
+            <li>
+              <span class="check-dot" aria-hidden="true">✓</span>
+              <span><strong>No Added Formaldehyde</strong>Supports healthier indoor spaces for homes, apartments, hotels, and commercial projects.</span>
+            </li>
+            <li>
+              <span class="check-dot" aria-hidden="true">✓</span>
+              <span><strong>Low-VOC Material Profile</strong>Built with carefully selected materials to help reduce indoor emissions.</span>
+            </li>
+            <li>
+              <span class="check-dot" aria-hidden="true">✓</span>
+              <span><strong>Easy-Care Surface</strong>The protective wear layer and UV coating help resist stains, scratches, and everyday messes.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Product range</span>
+            <h2>All available styles, organized for fast selection.</h2>
+          </div>
+          <p>Choose by color family, surface look, and project style. Each product card includes the code and size information needed for a quick flooring inquiry.</p>
+        </div>
+        <div class="catalog-current" id="catalogCurrent"></div>
+        <div class="catalog-layout">
+          <aside class="category-nav" id="categoryNav" aria-label="Product categories"></aside>
+          <div class="catalog-panel" id="catalogGroups" aria-live="polite"></div>
+        </div>
+        <p class="collection-note">For quotation, send the product code, preferred thickness, order quantity, and destination.</p>
+      </div>
+    </section>
+
+    <section id="structure" class="structure">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Layered construction</span>
+            <h2>Layered construction for lasting stability.</h2>
+          </div>
+          <p>Each plank is built with a durable surface, protective wear layer, realistic decorative film, rigid SPC core, and optional IXPE backing for added comfort and sound reduction.</p>
+        </div>
+        <div class="structure-layout">
+          <div class="layer-stack" aria-label="SPC flooring layer structure">
+            <div class="layer">
+              <strong>UV coating</strong>
+              <span>Helps resist stains and keeps the surface easy to clean.</span>
+            </div>
+            <div class="layer">
+              <strong>Wear layer</strong>
+              <span>Helps protect the decorative layer from everyday wear, scratches, and foot traffic.</span>
+            </div>
+            <div class="layer">
+              <strong>Decorative film</strong>
+              <span>High-definition wood, stone, or patterned visuals for a realistic surface look.</span>
+            </div>
+            <div class="layer">
+              <strong>SPC core</strong>
+              <span>Dense stone-plastic composite core for waterproof performance and dimensional stability.</span>
+            </div>
+            <div class="layer">
+              <strong>IXPE backing</strong>
+              <span>Optional attached backing for added comfort, underfoot cushioning, and sound reduction.</span>
+            </div>
+          </div>
+          <div class="structure-photo">
+            <img src="assets/spc-layer-structure.jpg" alt="Exploded SPC flooring layer structure from the product catalog">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quality" class="quality">
+      <div class="shell quality-grid">
+        <div class="factory-gallery" aria-label="SPC flooring factory images">
+          <figure class="factory-shot">
+            <img src="assets/pdf-images/page-02-img-01.jpg" alt="SPC flooring production equipment">
+            <span>Production Line</span>
+          </figure>
+          <figure class="factory-shot">
+            <img src="assets/pdf-images/page-02-img-02.jpg" alt="Automated SPC flooring machinery">
+            <span>Automated Equipment</span>
+          </figure>
+          <figure class="factory-shot">
+            <img src="assets/pdf-images/page-02-img-03.jpg" alt="SPC flooring continuous production workshop">
+            <span>Continuous Production</span>
+          </figure>
+          <figure class="factory-shot">
+            <img src="assets/pdf-images/page-02-img-04.jpg" alt="Stacked SPC flooring core boards">
+            <span>Core Board Output</span>
+          </figure>
+          <figure class="factory-shot">
+            <img src="assets/pdf-images/page-02-img-05.jpg" alt="SPC flooring metering and mixing equipment">
+            <span>Material Metering</span>
+          </figure>
+          <figure class="factory-shot">
+            <img src="assets/pdf-images/page-02-img-06.jpg" alt="SPC flooring factory floor equipment">
+            <span>Factory Workshop</span>
+          </figure>
+          <figure class="factory-shot">
+            <img src="assets/pdf-images/page-02-img-07.jpg" alt="SPC flooring lamination production line">
+            <span>Lamination Line</span>
+          </figure>
+          <figure class="factory-shot">
+            <img src="assets/pdf-images/page-02-img-08.jpg" alt="SPC flooring packaged material in workshop">
+            <span>Material Storage</span>
+          </figure>
+        </div>
+        <div class="quality-panel">
+          <div>
+            <span class="kicker">Manufacturing</span>
+            <h2>Built for stable quality at production scale.</h2>
+          </div>
+          <p>Automated conveying, hot-pressing, continuous lamination, and controlled material metering help deliver consistent SPC flooring performance from batch to batch.</p>
+          <div class="metric-grid">
+            <div class="metric">
+              <strong>Controlled Process</strong>
+              <span>Stable batch production</span>
+            </div>
+            <div class="metric">
+              <strong>4-Side Bevel Option</strong>
+              <span>Refined plank edges</span>
+            </div>
+            <div class="metric">
+              <strong>Glue-free</strong>
+              <span>Click-lock installation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" class="quote">
+      <div class="shell quote-box">
+        <div>
+          <h2>Tell us what you need — we’ll prepare the right SPC flooring quote.</h2>
+          <p>Share your preferred color, thickness, size, quantity, and destination. Our team will help match suitable SPC flooring options and provide a fast quotation for residential, commercial, or wholesale projects.</p>
+        </div>
+        <aside class="contact-card" aria-label="Inquiry contact information">
+          <ul class="contact-lines">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4Z"></path><path d="m22 6-10 7L2 6"></path></svg>
+              <span><strong>Email</strong><a href="mailto:zcx1042685071@gmail.com">zcx1042685071@gmail.com</a></span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+              <span><strong>WhatsApp / Phone</strong><a href="tel:+8615029676734">+86 15029676734</a></span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path></svg>
+              <span><strong>Inquiry Details</strong>Product code, color, thickness, size, quantity, destination, and delivery timeline.</span>
+            </li>
+          </ul>
+          <div class="contact-actions">
+            <a class="button" href="mailto:zcx1042685071@gmail.com?subject=SPC%20Flooring%20Quote%20Request&body=Hello%2C%0A%0AI%20would%20like%20a%20quote%20for%20SPC%20flooring.%0AProduct%20code%3A%0AColor%3A%0AThickness%3A%0ASize%3A%0AQuantity%3A%0ADestination%3A%0ADelivery%20timeline%3A%0A">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"></path><path d="m22 2-7 20-4-9-9-4 20-7Z"></path></svg>
+              Request a Quote
+            </a>
+            <a class="button secondary" href="#products">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18"></path><path d="M3 12h18"></path><path d="M3 17h18"></path></svg>
+              Browse Products
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© 2026 RigidCore SPC Flooring. Waterproof vinyl rigid core flooring.</span>
+      <span>SPC planks · Stone looks · IXPE backing · OEM project supply</span>
+    </div>
+  </footer>
+  <script>
+    const catalogGroups = [
+      {
+        name: "Light & Natural Oak",
+        note: "Clean oak tones for bright homes, apartments, and Scandinavian-style interiors.",
+        products: [
+          ["LS1901", "Pale natural oak", "1220 x 150 x 4 mm", "High-res"],
+          ["LS1903", "Soft honey oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1905", "Quiet beige oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1906", "Light blonde oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1907", "Natural washed oak", "1220 x 150 x 4 mm", "High-res"],
+          ["LS1909", "Cream white oak", "1220 x 150 x 4 mm", "High-res"],
+          ["LS1931", "Warm oak with IXPE", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "Enhanced"],
+          ["LS1932", "Golden oak with IXPE", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "High-res"],
+          ["1027B-118", "Light project oak", "Project selection", "High-res"]
+        ]
+      },
+      {
+        name: "Cool Grey & Modern Wood",
+        note: "Grey and weathered wood visuals for contemporary apartments, offices, and retail spaces.",
+        products: [
+          ["1001-180", "Structured grey oak", "Project selection", "High-res"],
+          ["LS1921", "Balanced grey oak", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "High-res"],
+          ["LS1922", "Deep smoky oak", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "Enhanced"],
+          ["LS1923", "Silver grey oak", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "High-res"],
+          ["LS1925", "Mixed grey grain", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "Enhanced"],
+          ["LS1926", "Soft ash grey", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "High-res"],
+          ["LS1927", "Urban light grey", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "Enhanced"],
+          ["LS1928", "Cool grey plank", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "Enhanced"],
+          ["LS1933", "Pale grey oak", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "Enhanced"],
+          ["LS14002", "Weathered grey plank", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS14013", "Wide grey beige plank", "1220 x 180 x 4 mm", "Enhanced"]
+        ]
+      },
+      {
+        name: "Warm Classic Woods",
+        note: "Richer brown and walnut-style floors for hospitality, showrooms, and traditional interiors.",
+        products: [
+          ["1142-2", "Classic red walnut", "Project selection", "High-res"],
+          ["LS1838", "Soft bedroom oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1839", "Rustic brown oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1902", "Medium warm oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1908", "Long room walnut", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1910", "Light red oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1911", "Modern multi-tone oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1913", "Natural amber oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1919", "Dark rustic oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1920", "Wide grey-brown plank", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "Enhanced"],
+          ["LS1930", "Warm walnut with IXPE", "1220 x 183 x 5.5 mm + 1.5 mm IXPE", "High-res"],
+          ["LS1961", "Premium room wood", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1988", "Polished reddish wood", "1220 x 183 x 4 mm", "Enhanced"]
+        ]
+      },
+      {
+        name: "Stone & Tile Look",
+        note: "Waterproof stone visuals for bathrooms, kitchens, laundry rooms, cafes, and easy-clean spaces.",
+        products: [
+          ["LS1862", "Light concrete tile", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS1863", "Charcoal stone", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS1865", "White stone texture", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS1866", "Cream marble tone", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS1868", "Warm ivory stone", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS14017", "Black slate", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS14018", "Soft beige stone", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS14019", "Mid grey cement", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS14020", "Industrial grey tile", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS14025", "Dark mineral stone", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS14029", "Blue-grey stone", "610 x 305 x 4 mm", "Enhanced"],
+          ["LS1867", "Room-set grey tile", "610 x 305 x 4 mm", "Enhanced"]
+        ]
+      },
+      {
+        name: "Pattern & Project Specials",
+        note: "Decorative surfaces and compact sizes for project-led specifications and distinctive rooms.",
+        products: [
+          ["LS0909", "Compact plank", "610 x 127 x 4 mm", "Enhanced"],
+          ["LS14001", "Golden character oak", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS14015", "Multi-strip natural wood", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1871", "Soft room grey", "1220 x 150 x 4 mm", "Enhanced"],
+          ["LS1872", "Woven grey pattern", "1220 x 150 x 4 mm", "Enhanced"],
+          ["89003-4", "Textile grey surface", "1220 x 150 x 4 mm", "Enhanced"],
+          ["89003-5", "Warm woven pattern", "1220 x 150 x 4 mm", "Enhanced"]
+        ]
+      }
+    ];
+
+    function productDescription(groupName, finish) {
+      if (groupName.includes("Stone")) {
+        return `${finish} with waterproof SPC performance for spaces that need easy cleaning and strong dimensional stability.`;
+      }
+      if (groupName.includes("Pattern")) {
+        return `${finish} for project-specific interiors that need a distinctive surface without losing rigid core practicality.`;
+      }
+      return `${finish} with realistic grain, stable rigid core construction, and simple click-lock installation.`;
+    }
+
+    const productsPerPage = 9;
+    let activeGroupIndex = 0;
+    let activePage = 0;
+
+    function scrollToCatalogTop() {
+      const productsSection = document.querySelector("#products .catalog-layout") || document.getElementById("products");
+      if (!productsSection) return;
+      const offset = 86;
+      const top = productsSection.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+
+    function renderCategoryNav() {
+      const nav = document.getElementById("categoryNav");
+      if (!nav) return;
+      nav.innerHTML = catalogGroups.map((group, index) => `
+        <button class="category-button ${index === activeGroupIndex ? "is-active" : ""}" type="button" data-category="${index}" aria-pressed="${index === activeGroupIndex}">
+          <span>${group.name}</span>
+          <span>${group.products.length}</span>
+        </button>
+      `).join("");
+
+      nav.querySelectorAll(".category-button").forEach(button => {
+        button.addEventListener("click", () => {
+          activeGroupIndex = Number(button.dataset.category);
+          activePage = 0;
+          renderCatalog();
+          scrollToCatalogTop();
+        });
+      });
+    }
+
+    function renderCatalog() {
+      const mount = document.getElementById("catalogGroups");
+      if (!mount) return;
+      renderCategoryNav();
+      const group = catalogGroups[activeGroupIndex];
+      const pageCount = Math.ceil(group.products.length / productsPerPage);
+      const start = activePage * productsPerPage;
+      const products = group.products.slice(start, start + productsPerPage);
+      const current = document.getElementById("catalogCurrent");
+      if (current) {
+        current.innerHTML = `
+          <div>
+            <span class="kicker">${group.products.length} styles</span>
+            <h3>${group.name}</h3>
+          </div>
+          <p>${group.note}</p>
+        `;
+      }
+
+      mount.innerHTML = `
+        <section class="catalog-group" aria-label="${group.name}">
+          <div class="product-grid">
+            ${products.map(([code, finish, size]) => `
+              <article class="product-card">
+                <div class="product-media">
+                  <img src="assets/catalog/${code}.jpg" alt="${code} ${finish} SPC flooring" loading="lazy">
+                </div>
+                <div class="product-info">
+                  <div class="product-code">
+                    <h3>${code}</h3>
+                  </div>
+                  <p>${productDescription(group.name, finish)}</p>
+                  <div class="spec-row">
+                    <span>${finish}</span>
+                    <span>${size}</span>
+                  </div>
+                </div>
+              </article>
+            `).join("")}
+          </div>
+          ${pageCount > 1 ? `
+            <div class="pagination">
+              <span class="catalog-status">Showing ${start + 1}-${Math.min(start + productsPerPage, group.products.length)} of ${group.products.length}</span>
+              <div class="page-controls" aria-label="Catalog pagination">
+                <button class="page-button" type="button" data-page="prev" ${activePage === 0 ? "disabled" : ""}>Previous</button>
+                <button class="page-button" type="button" data-page="next" ${activePage >= pageCount - 1 ? "disabled" : ""}>Next</button>
+              </div>
+            </div>
+          ` : ""}
+        </section>
+      `;
+
+      mount.querySelectorAll(".page-button").forEach(button => {
+        button.addEventListener("click", () => {
+          if (button.dataset.page === "prev" && activePage > 0) activePage -= 1;
+          if (button.dataset.page === "next" && activePage < pageCount - 1) activePage += 1;
+          renderCatalog();
+          scrollToCatalogTop();
+        });
+      });
+    }
+
+    renderCatalog();
+  </script>
+</body>
+</html>
