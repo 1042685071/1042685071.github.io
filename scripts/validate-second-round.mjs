@@ -25,7 +25,8 @@ const requiredCopy = [
   "Product Code / Style Code",
   "Example: 1901, 89001, or send us a screenshot by email",
   "Request Quote for This Code",
-  "Samples are available for overseas buyers to check color, surface texture, thickness, click-lock quality and overall product feel before bulk orders. Sample cost and courier cost depend on destination and sample requirements.",
+  "Samples are available upon request. Please send the product code, target specification and destination country so we can prepare sample details for you.",
+  "MOQ, lead time and trade terms depend on product specification and order quantity.",
   "What is your MOQ?",
   "MOQ depends on product specification, color selection, packaging requirements and order quantity. Please send your target product code and quantity for confirmation.",
   "What is the production lead time?",
@@ -35,7 +36,6 @@ const requiredCopy = [
   "Can you provide certificates or test reports?",
   "Available product documents and compliance files can be provided upon request for qualified buyers.",
   "Can I get samples before placing a bulk order?",
-  "Yes. Samples are available for overseas importers, distributors, contractors and project buyers. You can request samples by sending the product code, target thickness, wear layer and destination country. Sample cost and courier cost depend on the destination and sample requirements.",
   "Certificates & Product Documents",
   "Product documents, certificates, test reports and technical files can be provided upon request for qualified importers, distributors and project buyers.",
   "CE documents available",
@@ -127,6 +127,8 @@ assert(!/\breserved\b/i.test(withoutComments), "Raw HTML still contains the word
 assert(!/we will use/i.test(withoutComments), "Raw HTML still contains 'we will use'");
 assert(!/manufacturer/i.test(withoutComments), "HTML should avoid unsupported manufacturer claims");
 assert(!/Free Samples/i.test(withoutComments), "HTML must not promise free samples");
+assert(!/Sample cost and courier cost/i.test(withoutComments), "HTML should not mention sample and courier cost rules");
+assert(!/sample cost and trade terms/i.test(withoutComments), "Bottom note should not mention sample cost");
 assert(!/REPLACE_WITH_FORM_ID/i.test(html), "Form action must not contain REPLACE_WITH_FORM_ID");
 assert(!html.includes("assets/catalog/"), "Product catalog must not reference assets/catalog");
 assert(!fs.existsSync(path.join(root, "assets", "catalog")), "Old assets/catalog directory should be removed");
